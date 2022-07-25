@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import { Navbar } from "../navbar";
-import { Footer } from "../footer";
+import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 
 export const Layout = ({ title, description, keywords, children }) => {
 	return (
@@ -12,7 +12,7 @@ export const Layout = ({ title, description, keywords, children }) => {
 				<meta name='keywords' content={keywords} />
 			</Head>
 			<Navbar />
-			<div className={styles["content-wrapper"]}>{children}</div>
+			<div>{children}</div>
 			<Footer />
 		</div>
 	);
