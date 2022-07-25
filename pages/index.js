@@ -1,9 +1,9 @@
-import Layout from "layout";
+import { Layout } from "../components/layout/Layout";
 
 export default function Home() {
 	return (
-		<div>
+		<Layout>
 			<div>Hotel Reservation</div>
-		</div>
+		</Layout>
 	);
 }
