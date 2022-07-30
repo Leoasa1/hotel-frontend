@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.neuton {
+    font-family: 'Neuton', serif;
+}
+
+.primary {
+    color: #34A0FD; 
+}
+
+.bg-primary {
+    background-color: #34A0FD;
+    color: white;
+}
+
+.secondary {
+    color: #3D4045;
+}
+
+.bg-secondary {
+    background-color: #3D4045;
+    color: white;
+}
