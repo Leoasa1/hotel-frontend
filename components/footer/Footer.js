@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Footer = () => {
 	return (
-		<footer className="w-full bg-[#3D4045] flex justify-around items-center text-[white] py-3 mt-20">
+		<footer className="w-full flex justify-around items-center py-3 mt-20 font-[sans-serif] bg-[#3D4045] text-[white]">
 			<div>
 				<Image src="/images/logo.png" alt="Hotel Deluxe" width={166} height={53} className="object-cover cursor-pointer" />
 			</div>
