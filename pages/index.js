@@ -1,11 +1,5 @@
-import Footer from "../components/footer/Footer";
-import { Layout } from "../components/layout/Layout";
+import React from 'react';
 
 export default function Home() {
-	return (
-		<Layout>
-			<div>Hotel Reservation</div>
-		</Layout>
-	
-	);
+	return <div>Hotel Reservation</div>;
 }
