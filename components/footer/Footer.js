@@ -15,10 +15,10 @@ const Footer = () => {
 				Copyright 2022 Deluxe Hotel. All rights reserved.
 			</div>
 			<div className="flex justify-between gap-10 text-[16px] font-[500]">
-					<Link href="">
+					<Link href="/about">
 					<a href="">About</a>
 					</Link>
-					<Link href="">
+					<Link href="/contact">
 					<a href="">Support</a>
 					</Link>
 			</div>
