@@ -10,7 +10,7 @@ const contact = () => {
 			<div className='w-full p-10 bg-bottom bg-cover bg-[url("/images/contact-bg.jpg")]'>
 				<h1 className='neuton flex justify-center items-center text-white font-[700] text-[64px]' >Contact</h1>
 			</div>
-			<div className='flex justify-between text-black '>
+			<div className='flex justi fy-between text-black '>
 					<div className='inter flex flex-col justify-center gap-[20px] p-20'>
 						<h1 className=' font-[500] text-[32px] text-black '>Contact</h1>
 
