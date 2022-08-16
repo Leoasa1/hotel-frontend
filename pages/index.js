@@ -26,5 +26,4 @@ export default function Home() {
 			</div>
 		</div>
 	);
->>>>>>> 3321a6953cc6baea062f56c6d82c28e404f1ad2f
 }
