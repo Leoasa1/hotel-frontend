@@ -31,65 +31,68 @@ const contact = () => {
 						</div>
 					</div>
 
-					<div className='inter flex-1 flex flex-col gap-[20px] justify-center items-center p-10 font-[500] text-[20px]'>
-						<div className='dropdown dropdown-hover  relative w-full p-3 rounded-box border border-[#B7B7B7] shadow-lg'>
-							<div className='flex items-center justify-between px-3'>
-								<label className='m-1' htmlFor="">Cancellation</label>
-								<VscChevronDown size={25}/>
-							</div>
-							<ul className='dropdown-content p-2 menu shadow rounded-box absolute top-full left-1/2 transform -translate-x-1/2  w-full bg-white'>
-							<li>
-								<Link href=''>
-									<a>1</a>
-								</Link>
-							</li>
-							<li>
-								<Link href=''>
-									<a>1</a>
-								</Link>
-							</li>
-							</ul>
-					</div>
 					
-					<div className='dropdown dropdown-hover relative w-full p-3 rounded-box border border-[#B7B7B7] shadow-lg'>
-							<div className='flex items-center justify-between px-3'>
-								<label className='m-1' htmlFor="">Check-in & Check-out</label>
-								<VscChevronDown size={25}/>
-							</div>
-							<ul className='dropdown-content p-2 menu shadow rounded-box absolute top-full left-1/2 transform -translate-x-1/2  w-full bg-white'>
-							<li>
-								<Link href=''>
-									<a>1</a>
-								</Link>
-							</li>
-							<li>
-								<Link href=''>
-									<a>1</a>
-								</Link>
-							</li>
-							</ul>
-					</div>
 					
-					<div className='dropdown dropdown-hover relative w-full p-3 rounded-box border border-[#B7B7B7] shadow-lg'>
-							<div className='flex items-center justify-between px-3'>
-								<label className='m-1' htmlFor="">Review Booking</label>
-								<VscChevronDown size={25}/>
-							</div>
-							<ul className='dropdown-content p-2 menu shadow rounded-box absolute top-full left-1/2 transform -translate-x-1/2  w-full bg-white'>
-							<li>
-								<Link href=''>
-									<a>1</a>
-								</Link>
-							</li>
-							<li>
-								<Link href=''>
-									<a>1</a>
-								</Link>
-							</li>
-							</ul>	
+				<div className='inter flex-1 flex flex-col gap-[20px] justify-center items-center p-10 font-[500] text-[20px]'>			
+
+					<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+  					<div class="collapse-title text-xl font-medium">
+								Cancellation
+ 						 </div>
+  					<div class="collapse-content"> 
+  					  <p>Change of plans? No problem. We make it easy to cancel most hotel bookings. You could contact the hotel directly and one of our staff members will cancel the booking.</p>
+  					</div>
 					</div>
-					
+
+
+					<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+  					<div class="collapse-title text-xl font-medium">
+								Check-in & check-out 
+ 						 </div>
+  					<div class="collapse-content"> 
+							<p>Here's everything you need to know to make sure you get in and out of your hotel or vacation rental without any hiccups.</p>
+							<br />
+							<p class='font-[700]'>All about check-in</p>
+							<p>
+							- You can show up any time between the check-in time listed in your itinerary and midnight. As a perk, booking with us means you won't have a problem checking in late. No need to rush!
+							</p>
+							<p>
+							- Be sure to have your government-issued ID handy when you show up – you'll need it to check in							</p>
+							<p>
+							- Want to show up early, or past midnight? Be sure to give your hotel or property manager a call first.
+							</p>
+							<p>
+							One last thing: If you decide to not show up for any reason, the hotel may still charge you. We suggest checking your hotel's Rules and Restrictions in your itinerary for details.
+							</p>
+							<br />
+							<p class='font-[700]'>The scoop on check-out</p>
+							<p>
+							You can hang around up until check-out time (also in your itinerary) on the last day of your booking, then it's time to head out. Don't forget your phone charger!
+							</p>
+  					</div>
 					</div>
+
+					<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+  					<div class="collapse-title text-xl font-medium">
+								Review Booking
+ 						 </div>
+  					<div class="collapse-content"> 
+							<p>
+								We make it easy to view the details of your bookings. That's why after you book, we send you a confirmation email with your itinerary number and trip details. You can also view, email, and print your itinerary right from our website
+							</p>
+							<span>
+								You can hop over to 
+							</span>
+							<Link href='/'>
+								<span class='primary cursor-pointer	underline underline-offset-4 decoration-[primary]'>Find your Booking </span>
+							</Link>
+							<span>
+							to track down your booking.
+							</span>
+  					</div>
+					</div>
+
+				</div>
 				</div>
 			</div>
 	)
