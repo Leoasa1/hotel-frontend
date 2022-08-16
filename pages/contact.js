@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope,faPhoneFlip,faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import Footer from '../components/footer/Footer';
-import { Layout } from '../components/layout/Layout';
+import { IoMdMail }  from 'react-icons/io';
+import { AiFillPhone } from "react-icons/ai";
+import { FaAngleDown } from "react-icons/fa";
 import Link from 'next/link'
 
 
@@ -17,7 +16,7 @@ const contact = () => {
 
 						<div className='flex flex-col'>
 							<div className='flex items-center gap-[10px]'>
-							<FontAwesomeIcon icon={faPhoneFlip } />
+							<AiFillPhone/>
 							<h2 className='font-[500] text-[24px]'>Phone</h2>
 						</div>
 							<span className='font-[400] text-[20px]'>888-888-888</span>
@@ -25,7 +24,7 @@ const contact = () => {
 
 						<div className='flex flex-col'>
 							<div className='flex items-center gap-[10px]'>
-							<FontAwesomeIcon icon={faEnvelope } />
+							<IoMdMail/>
 							<h2 className='font-[500] text-[24px]'>Email</h2>
 						</div>
 							<span className='font-[400] text-[20px]'>hoteldeluxe@gmail.com</span>
@@ -36,7 +35,7 @@ const contact = () => {
 						<div className='dropdown dropdown-hover  relative w-full p-3 rounded-box border border-[#B7B7B7] shadow-lg'>
 							<div className='flex items-center justify-between px-3'>
 								<label className='m-1' htmlFor="">Cancellation</label>
-								<FontAwesomeIcon icon={faAngleDown } />
+								<FaAngleDown/>
 							</div>
 							<ul className='dropdown-content p-2 menu shadow rounded-box absolute top-full left-1/2 transform -translate-x-1/2  w-full bg-white'>
 							<li>
@@ -55,7 +54,7 @@ const contact = () => {
 					<div className='dropdown dropdown-hover relative w-full p-3 rounded-box border border-[#B7B7B7] shadow-lg'>
 							<div className='flex items-center justify-between px-3'>
 								<label className='m-1' htmlFor="">Check-in & Check-out</label>
-								<FontAwesomeIcon icon={faAngleDown } />
+								<FaAngleDown/>
 							</div>
 							<ul className='dropdown-content p-2 menu shadow rounded-box absolute top-full left-1/2 transform -translate-x-1/2  w-full bg-white'>
 							<li>
@@ -74,7 +73,7 @@ const contact = () => {
 					<div className='dropdown dropdown-hover relative w-full p-3 rounded-box border border-[#B7B7B7] shadow-lg'>
 							<div className='flex items-center justify-between px-3'>
 								<label className='m-1' htmlFor="">Review Booking</label>
-								<FontAwesomeIcon icon={faAngleDown } />
+								<FaAngleDown/>
 							</div>
 							<ul className='dropdown-content p-2 menu shadow rounded-box absolute top-full left-1/2 transform -translate-x-1/2  w-full bg-white'>
 							<li>
@@ -87,10 +86,8 @@ const contact = () => {
 									<a>1</a>
 								</Link>
 							</li>
-							</ul>
-						</div>
-
-					
+							</ul>	
+					</div>
 					
 					</div>
 				</div>
