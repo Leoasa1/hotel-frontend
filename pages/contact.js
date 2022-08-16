@@ -80,6 +80,7 @@ const contact = () => {
 							<p>
 								We make it easy to view the details of your bookings. That's why after you book, we send you a confirmation email with your itinerary number and trip details. You can also view, email, and print your itinerary right from our website
 							</p>
+							<br />
 							<span>
 								You can hop over to 
 							</span>
