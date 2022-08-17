@@ -1,4 +1,3 @@
-import React from 'react';
 import Search from '../components/search/Search';
 import { FaStar } from 'react-icons/fa';
 
