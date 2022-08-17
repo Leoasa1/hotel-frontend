@@ -2,8 +2,10 @@ import React from "react";
 import Head from "next/head";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
+import { useRouter } from 'next/router';
 
 export const Layout = ({ title, description, keywords, children }) => {
+	const router = useRouter();
 	return (
 		<div>
 			<Head>
@@ -13,7 +15,7 @@ export const Layout = ({ title, description, keywords, children }) => {
 			</Head>
 			<Navbar />
 			<div>{children}</div>
-			<Footer />
+			{router.pathname === '/contact' ? <></> : <Footer />}
 		</div>
 	);
 };
