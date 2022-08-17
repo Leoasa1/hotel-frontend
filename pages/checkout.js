@@ -3,12 +3,13 @@ import Image from 'next/image'
 
 function checkout() {
   return (
-    <div className='inter flex justify-center'>
-      <div className='w-full max-w-[1024px] p-10 flex flex-col gap-5'>
-        <h1 className='font-[700] text-[32px]'>Online Booking</h1>
+    <div className='inter'>
+      <div className='container mx-auto '>
+        <div className='p-10 flex flex-col gap-5'>
+         <h1 className='font-[700] text-[32px]'>Online Booking</h1>
         <div className='flex justify-between gap-5'>
 
-          <div className='bg-[#F9F9F9] p-10 flex flex-col gap-10'>
+        <div className='bg-[#F9F9F9] p-10 flex flex-col gap-10'>
             
             <div className='flex justify-start flex-wrap gap-10'>
               <div className='flex flex-col'>
@@ -68,6 +69,8 @@ function checkout() {
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
   )
 }
