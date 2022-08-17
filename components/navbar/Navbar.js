@@ -5,8 +5,8 @@ import Link from "next/link"
 
 const Navbar = () => {
 	return (
-		<footer className="inter bg-primary flex justify-center">
-		<div className="max-w-[1024px] w-full flex justify-between items-center py-2 ">
+		<footer className="inter bg-primary">
+		<div className="container mx-auto flex justify-between items-center py-2 ">
 		<Link href="/">
 			<Image src="/images/logo.png" alt="Hotel Deluxe" width={166} height={53} className="object-cover cursor-pointer" />
 		</Link>
