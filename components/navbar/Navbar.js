@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const Navbar = () => {
 	return (
-		<footer className="inter bg-primary">
+		<nav className="inter bg-primary">
 		<div className="container mx-auto flex justify-between items-center py-2 ">
 		<Link href="/">
 			<Image src="/images/logo.png" alt="Hotel Deluxe" width={166} height={53} className="object-cover cursor-pointer" />
@@ -20,7 +20,7 @@ const Navbar = () => {
 				</Link>
 		</div>
 		</div>
-	</footer>
+	</nav>
 	)
 };
 
