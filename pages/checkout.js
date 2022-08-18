@@ -6,7 +6,7 @@ function checkout() {
   const [identify, setIdentify] = useState({
     Firstname: undefined,
     Lastname: undefined,
-    phone: undefined,
+    Phone: undefined,
     email:undefined
   })
 
@@ -45,7 +45,7 @@ function checkout() {
               
               <div className='flex flex-col'>
                 <label>Phone</label>
-                <input type="text" id='Phone' className='rounded-[5px] p-1 outline-none' onChange={handleChange}/>
+                <input type="number" id='Phone' className='rounded-[5px] p-1 outline-none' onChange={handleChange}/>
               </div>
 
               
