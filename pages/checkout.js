@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import {useRouter} from 'next/router'
+
 
 function checkout() {
 
@@ -9,6 +11,7 @@ function checkout() {
     Phone: undefined,
     email:undefined
   })
+  const router=useRouter()
 
   const handleChange = (e) => {
     setIdentify(prev => ({ ...prev, [e.target.id]: e.target.value }))
@@ -17,6 +20,15 @@ function checkout() {
   const handleClick = (e) => {
     e.preventDefault();
     console.log(identify)
+    setTimeout(() => {
+      router.push("/")
+    }, 3000);
+  }
+
+  const handleBack = () => {
+   
+    router.back();
+    
   }
 
   return (
@@ -56,7 +68,7 @@ function checkout() {
             </div>
 
             <div className='flex'>
-              <button className='bg-secondary rounded-[5px] px-14 py-2 mr-10'>Back</button>
+              <button onClick={handleBack} className='bg-secondary rounded-[5px] px-14 py-2 mr-10'>Back</button>
 
               <button onClick={handleClick} className='bg-primary rounded-[5px] px-4'>Complete Booking</button>
            </div>
