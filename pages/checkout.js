@@ -19,19 +19,19 @@ function checkout() {
 
               
               <div className='flex flex-col'>
-                <label>First Name</label>
+                <label>Last Name</label>
                 <input type="text" className='rounded-[5px] p-1 outline-none' />
               </div>
 
               
               <div className='flex flex-col'>
-                <label>First Name</label>
+                <label>Phone</label>
                 <input type="text" className='rounded-[5px] p-1 outline-none' />
               </div>
 
               
               <div className='flex flex-col'>
-                <label>First Name</label>
+                <label>Email</label>
                 <input type="text" className='rounded-[5px] p-1 outline-none' />
               </div>
             </div>
