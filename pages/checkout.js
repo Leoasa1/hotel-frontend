@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 function checkout() {
+
+  const [identify, setIdentify] = useState({
+    Firstname: undefined,
+    Lastname: undefined,
+    phone: undefined,
+    email:undefined
+  })
+
+  const handleChange = (e) => {
+    setIdentify(prev => ({ ...prev, [e.target.id]: e.target.value }))
+  }
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(identify)
+  }
+
   return (
     <div className='inter'>
       <div className='container mx-auto '>
         <div className='p-10 flex flex-col gap-5'>
-         <h1 className='font-[700] text-[32px]'>Online Booking</h1>
+          <h1 className='font-[700] text-[32px]'>Online Booking</h1>
+
+
         <div className='flex justify-between gap-5'>
 
         <div className='bg-[#F9F9F9] p-10 flex flex-col gap-10'>
@@ -14,32 +33,32 @@ function checkout() {
             <div className='flex justify-start flex-wrap gap-10'>
               <div className='flex flex-col'>
                 <label>First Name</label>
-                <input type="text" className='rounded-[5px] p-1 outline-none' />
+                <input type="text" id='Firstname' className='rounded-[5px] p-1 outline-none' onChange={handleChange} />
               </div>
 
               
               <div className='flex flex-col'>
                 <label>Last Name</label>
-                <input type="text" className='rounded-[5px] p-1 outline-none' />
+                <input type="text" id='Lastname' className='rounded-[5px] p-1 outline-none' onChange={handleChange}/>
               </div>
 
               
               <div className='flex flex-col'>
                 <label>Phone</label>
-                <input type="text" className='rounded-[5px] p-1 outline-none' />
+                <input type="text" id='Phone' className='rounded-[5px] p-1 outline-none' onChange={handleChange}/>
               </div>
 
               
               <div className='flex flex-col'>
                 <label>Email</label>
-                <input type="text" className='rounded-[5px] p-1 outline-none' />
+                <input type="email" id='email' className='rounded-[5px] p-1 outline-none' onChange={handleChange} />
               </div>
             </div>
 
             <div className='flex'>
               <button className='bg-secondary rounded-[5px] px-14 py-2 mr-10'>Back</button>
 
-              <button className='bg-primary rounded-[5px] px-4'>Complete Booking</button>
+              <button onClick={handleClick} className='bg-primary rounded-[5px] px-4'>Complete Booking</button>
            </div>
 
           </div>
