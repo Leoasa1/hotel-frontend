@@ -1,5 +1,7 @@
 import Search from '../components/search/Search';
 import { FaStar } from 'react-icons/fa';
+import Image from 'next/image';
+
 
 export default function Home() {
 	return (
@@ -22,6 +24,29 @@ export default function Home() {
 						</div>
 						<Search />
 					</div>
+				</div>
+			</div>
+
+			<div className='container mx-auto mb-20'>
+				<div className='flex flex-col items-center gap-5'>
+					
+					<h1 className='font-[700] text-[36px]'>Our Fine Dinning</h1>
+					
+					<div className='border w-[154px]  bg-[#CBCBCB] mb-5'></div>
+					
+					<div className='flex flex-col gap-5'>
+						<Image src='/images/roof.jpg' width={1188} height={605} />
+						<div className='flex gap-5'>
+							<Image src='/images/resturant.jpg' width={584} height={380} />
+							<Image src='/images/green-sitting.jpg' width={588} height={380} />
+						</div>
+					</div>
+
+					<h1 className='font-[700] text-[36px] mt-5'>Relax by the Pool</h1>
+					
+					<div className='border w-[154px]  bg-[#CBCBCB] mb-5'></div>
+					
+					<Image src='/images/pool.jpg' width={1190} height={360} />
 				</div>
 			</div>
 		</div>
