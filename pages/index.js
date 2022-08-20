@@ -1,7 +1,8 @@
 import Search from '../components/search/Search';
 import { FaStar } from 'react-icons/fa';
 
-export default function Home() {
+export default function Home({ posts }) {
+	console.log(posts)
 	return (
 		<div>
 			<div className='hero min-h-screen'>

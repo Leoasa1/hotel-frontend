@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { useRouter } from 'next/router'
 import { FaUser, FaThLarge, FaWifi, FaBed } from 'react-icons/fa';
+import useFetch from '../../hooks/useFetch';
 
 const RoomCard = () => {
+
+	
+	const router = useRouter()
+	const { checkIn, checkOut } = router.query;
+
+
+	const handleClick = () => {
+
+		router.push({
+			pathname: `/checkout`,
+			query:{checkIn,checkOut}
+		})
+	}
+
+	const handleClick2 = () => {
+		router.push({
+			pathname: `/item`,
+			query:{checkIn,checkOut}
+		})
+	}
+	console.log(checkIn,checkOut)
 	return (
-		<div className='card lg:card-side bg-base-100 shadow-xl border'>
+	
+		<div onClick={handleClick2}  className='card lg:card-side bg-base-100 shadow-xl border cursor-pointer'>
 			<figure>
 				<Image
 					layout='intrinsic'
@@ -16,19 +42,19 @@ const RoomCard = () => {
 			</figure>
 			<div className='card-body'>
 				<h2 className='card-title text-3xl mb-4'>
-					Standard Room, 1 King Bed
+					1 Standard Room, 1 King Bed
 				</h2>
 				<div className='flex flex-col gap-4'>
 					<div className='flex flex-row gap-4'>
 						<FaThLarge size={20} />
-						250 Sq ft
+						360 Sq ft
 					</div>
 					<div className='flex flex-row gap-4'>
 						<FaUser size={20} />
 						Sleeps 2
 					</div>
 					<div className='flex flex-row gap-4'>
-						<FaBed size={20} />1 King Bed
+						<FaBed size={20} />1 king Bed
 					</div>
 					<div className='flex flex-row gap-4'>
 						<FaWifi size={20} />
@@ -36,12 +62,13 @@ const RoomCard = () => {
 					</div>
 				</div>
 				<div className='card-actions justify-end'>
-					<button className='btn bg-primary border-info px-20'>
+					<button onClick={handleClick} className='btn bg-primary border-info px-20'>
 						Book
 					</button>
 				</div>
 			</div>
-		</div>
+				</div>
+		
 	);
 };
 

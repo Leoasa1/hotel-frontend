@@ -1,4 +1,4 @@
-import React from "react";
+import { React,forwardRef} from "react";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -25,4 +25,4 @@ const Footer = () => {
 	)
 };
 
-export default Footer;
+export default forwardRef(Footer);

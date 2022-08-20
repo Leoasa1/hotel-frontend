@@ -9,11 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
     "daisyui": "^2.20.0",
+    "date-fns": "^2.29.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "http-proxy-middleware": "^2.0.6",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.2",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0",
     "sass": "^1.54.0"
   },
   "devDependencies": {
