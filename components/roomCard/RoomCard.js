@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
-import { FaUser, FaThLarge, FaWifi, FaBed } from 'react-icons/fa';
+import Link from 'next/link';
 
-const RoomCard = () => {
+import { useRouter } from 'next/router'
+import { FaUser, FaThLarge, FaWifi, FaBed } from 'react-icons/fa';
+import { SearchContext } from '../../context/SearchContext';
+
+const RoomCard = ({ item }) => {
+	// console.log(item)
+	const router = useRouter()
+	const { query } = useRouter() || { query: { text: '' } }
+	const { checkIn, checkOut} = query;
+
+	// console.log(bed)
+
+	const handleClick = () => {
+
+		router.push({
+			pathname: `/checkout`,
+		})
+	}
+
+
+	// console.log(room_type)
+
+	const handleClick2 = () => {
+		router.push({
+			pathname: `/item`,
+		})
+	}
 	return (
-		<div className='card lg:card-side bg-base-100 shadow-xl border'>
+	
+		<div   className='card lg:card-side bg-base-100 shadow-xl border cursor-pointer'>
 			<figure>
 				<Image
 					layout='intrinsic'
@@ -12,23 +39,24 @@ const RoomCard = () => {
 					alt='Album'
 					width={400}
 					height={350}
+					onClick={handleClick2}
 				/>
 			</figure>
 			<div className='card-body'>
-				<h2 className='card-title text-3xl mb-4'>
-					Standard Room, 1 King Bed
+			<h2 className='card-title text-3xl mb-4'>
+					1 Premium Room, 1 {item} Bed
 				</h2>
 				<div className='flex flex-col gap-4'>
 					<div className='flex flex-row gap-4'>
 						<FaThLarge size={20} />
-						250 Sq ft
+						360 Sq ft
 					</div>
 					<div className='flex flex-row gap-4'>
 						<FaUser size={20} />
 						Sleeps 2
 					</div>
 					<div className='flex flex-row gap-4'>
-						<FaBed size={20} />1 King Bed
+						<FaBed size={20} />1 king Bed
 					</div>
 					<div className='flex flex-row gap-4'>
 						<FaWifi size={20} />
@@ -36,12 +64,13 @@ const RoomCard = () => {
 					</div>
 				</div>
 				<div className='card-actions justify-end'>
-					<button className='btn bg-primary border-info px-20'>
+					<button onClick={handleClick} className='btn bg-primary border-info px-20'>
 						Book
 					</button>
 				</div>
 			</div>
-		</div>
+				</div>
+		
 	);
 };
 
