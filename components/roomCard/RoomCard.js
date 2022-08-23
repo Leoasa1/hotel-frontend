@@ -1,36 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { useRouter } from 'next/router'
 import { FaUser, FaThLarge, FaWifi, FaBed } from 'react-icons/fa';
-import useFetch from '../../hooks/useFetch';
+import { SearchContext } from '../../context/SearchContext';
 
-const RoomCard = () => {
-
-	
+const RoomCard = ({ item }) => {
+	// console.log(item)
 	const router = useRouter()
-	const { checkIn, checkOut } = router.query;
+	const { query } = useRouter() || { query: { text: '' } }
+	const { checkIn, checkOut} = query;
 
+	// console.log(bed)
 
 	const handleClick = () => {
 
 		router.push({
 			pathname: `/checkout`,
-			query:{checkIn,checkOut}
 		})
 	}
+
+
+	// console.log(room_type)
 
 	const handleClick2 = () => {
 		router.push({
 			pathname: `/item`,
-			query:{checkIn,checkOut}
 		})
 	}
-	console.log(checkIn,checkOut)
 	return (
 	
-		<div onClick={handleClick2}  className='card lg:card-side bg-base-100 shadow-xl border cursor-pointer'>
+		<div   className='card lg:card-side bg-base-100 shadow-xl border cursor-pointer'>
 			<figure>
 				<Image
 					layout='intrinsic'
@@ -38,11 +39,12 @@ const RoomCard = () => {
 					alt='Album'
 					width={400}
 					height={350}
+					onClick={handleClick2}
 				/>
 			</figure>
 			<div className='card-body'>
-				<h2 className='card-title text-3xl mb-4'>
-					1 Standard Room, 1 King Bed
+			<h2 className='card-title text-3xl mb-4'>
+					1 Premium Room, 1 {item} Bed
 				</h2>
 				<div className='flex flex-col gap-4'>
 					<div className='flex flex-row gap-4'>
